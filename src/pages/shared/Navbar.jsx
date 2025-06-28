@@ -99,7 +99,7 @@ const Navbar = () => {
 							<a
 								href="/mdarifuddin-resume.pdf"
 								download
-								className="group relative px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 hidden sm:flex items-center space-x-2"
+								className="group relative px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 hidden lg:flex items-center space-x-2"
 							>
 								<Download size={16} />
 								<span>Resume</span>
@@ -122,7 +122,7 @@ const Navbar = () => {
 			<div
 				className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${
 					isMobileMenuOpen
-						? "bg-black/50 backdrop-blur-sm opacity-100 pointer-events-auto"
+						? "bg-black/50 backdrop-blur-sm opacity-100 pointer-events-auto z-9999"
 						: "opacity-0 pointer-events-none"
 				}`}
 			>
