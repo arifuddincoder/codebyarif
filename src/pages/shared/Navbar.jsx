@@ -75,7 +75,7 @@ const Navbar = () => {
 						<div className="navbar-start">
 							<NavLink
 								to="/"
-								className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent tracking-wide hover:scale-105 transition-transform duration-300 flex items-center"
+								className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent tracking-wide hover:scale-105 transition-transform duration-300 flex items-center -ml-2"
 							>
 								<ChevronLeft size={45} className="text-cyan-400" />
 								<span className="bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text mr-1">
@@ -122,7 +122,7 @@ const Navbar = () => {
 			<div
 				className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${
 					isMobileMenuOpen
-						? "bg-black/50 backdrop-blur-sm opacity-100 pointer-events-auto z-9999"
+						? "bg-black/50 backdrop-blur-sm opacity-100 pointer-events-auto z-"
 						: "opacity-0 pointer-events-none"
 				}`}
 			>
