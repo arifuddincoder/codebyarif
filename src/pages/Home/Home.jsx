@@ -240,7 +240,7 @@ const Home = () => {
 								<div className="w-24 h-24 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-full mx-auto flex items-center justify-center">
 									<Globe size={40} className="text-white" />
 								</div>
-								<h3 className="text-2xl font-bold">5+ Years</h3>
+								<h3 className="text-2xl font-bold">10+ Years</h3>
 								<p className="text-gray-300">Development Experience</p>
 							</div>
 						</div>
