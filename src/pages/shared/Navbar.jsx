@@ -1,64 +1,173 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router";
+import { ChevronLeft, ChevronRight, Download, Menu, X } from "lucide-react";
 
 const Navbar = () => {
+	const [isScrolled, setIsScrolled] = useState(false);
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 50);
+		};
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
 	const navLinks = (
 		<>
 			<li>
-				<NavLink to="/" className={({ isActive }) => (isActive ? "text-indigo-600 font-semibold" : "")}>
+				<NavLink
+					to="/"
+					className={({ isActive }) =>
+						`relative px-4 py-2 rounded-lg transition-all duration-300 hover:text-cyan-400 ${
+							isActive ? "text-cyan-400 font-semibold bg-cyan-400/10" : "text-gray-300 hover:bg-white/10"
+						}`
+					}
+					onClick={() => setIsMobileMenuOpen(false)}
+				>
 					Home
+					<span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
 				</NavLink>
 			</li>
 			<li>
-				<NavLink to="/projects" className={({ isActive }) => (isActive ? "text-indigo-600 font-semibold" : "")}>
+				<NavLink
+					to="/projects"
+					className={({ isActive }) =>
+						`relative px-4 py-2 rounded-lg transition-all duration-300 hover:text-cyan-400 ${
+							isActive ? "text-cyan-400 font-semibold bg-cyan-400/10" : "text-gray-300 hover:bg-white/10"
+						}`
+					}
+					onClick={() => setIsMobileMenuOpen(false)}
+				>
 					Projects
+					<span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
 				</NavLink>
 			</li>
 			<li>
-				<NavLink to="/contact" className={({ isActive }) => (isActive ? "text-indigo-600 font-semibold" : "")}>
+				<NavLink
+					to="/contact"
+					className={({ isActive }) =>
+						`relative px-4 py-2 rounded-lg transition-all duration-300 hover:text-cyan-400 ${
+							isActive ? "text-cyan-400 font-semibold bg-cyan-400/10" : "text-gray-300 hover:bg-white/10"
+						}`
+					}
+					onClick={() => setIsMobileMenuOpen(false)}
+				>
 					Contact
+					<span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
 				</NavLink>
 			</li>
 		</>
 	);
 
 	return (
-		<div className="navbar bg-white shadow-md px-4 md:px-8 sticky top-0 z-50">
-			<div className="navbar-start">
-				<NavLink to="/" className="text-2xl font-bold text-indigo-600 tracking-wide">
-					Md Arif Uddin
-				</NavLink>
-			</div>
+		<>
+			{/* Navbar */}
+			<nav
+				className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+					isScrolled ? "bg-slate-900/90 backdrop-blur-lg border-b border-white/10 shadow-lg" : "bg-transparent"
+				}`}
+			>
+				<div className="max-w-7xl mx-auto px-4">
+					<div className="flex items-center justify-between h-16 md:h-20">
+						{/* Logo */}
+						<div className="navbar-start">
+							<NavLink
+								to="/"
+								className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent tracking-wide hover:scale-105 transition-transform duration-300 flex items-center"
+							>
+								<ChevronLeft size={45} className="text-cyan-400" />
+								<span className="bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text mr-1">
+									CodeByArif
+								</span>
+								<div className="flex items-center gap-0">
+									/
+									<ChevronRight size={45} className="text-purple-400" />
+								</div>
+							</NavLink>
+						</div>
 
-			<div className="navbar-center hidden lg:flex">
-				<ul className="menu menu-horizontal px-1 gap-2">{navLinks}</ul>
-			</div>
+						{/* Desktop Navigation */}
+						<div className="navbar-center hidden lg:flex">
+							<ul className="flex items-center space-x-2">{navLinks}</ul>
+						</div>
 
-			<div className="navbar-end">
-				<a href="/resume.pdf" download className="btn btn-sm bg-indigo-600 text-white hover:bg-indigo-700 rounded-full">
-					Download Resume
-				</a>
-				<div className="dropdown dropdown-end lg:hidden ml-2">
-					<label tabIndex={0} className="btn btn-sm btn-ghost">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							className="h-5 w-5"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-						>
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-						</svg>
-					</label>
-					<ul
-						tabIndex={0}
-						className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-white rounded-box w-52 space-y-2"
-					>
-						{navLinks}
-					</ul>
+						{/* Right Side */}
+						<div className="navbar-end flex items-center space-x-4">
+							{/* Download Resume Button */}
+							<a
+								href="/mdarifuddin-resume.pdf"
+								download
+								className="group relative px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 hidden sm:flex items-center space-x-2"
+							>
+								<Download size={16} />
+								<span>Resume</span>
+								<div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur"></div>
+							</a>
+
+							{/* Mobile Menu Button */}
+							<button
+								onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+								className="lg:hidden p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+							>
+								{isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+							</button>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+			{/* Mobile Menu Overlay */}
+			<div
+				className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${
+					isMobileMenuOpen
+						? "bg-black/50 backdrop-blur-sm opacity-100 pointer-events-auto"
+						: "opacity-0 pointer-events-none"
+				}`}
+			>
+				{/* Mobile Menu */}
+				<div
+					className={`fixed top-0 right-0 h-full w-80 max-w-full bg-slate-900/95 backdrop-blur-lg border-l border-white/10 shadow-2xl transition-transform duration-300 ${
+						isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+					}`}
+				>
+					<div className="flex flex-col h-full">
+						{/* Mobile Menu Header */}
+						<div className="flex items-center justify-between p-6 border-b border-white/10">
+							<span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+								Menu
+							</span>
+							<button
+								onClick={() => setIsMobileMenuOpen(false)}
+								className="p-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors duration-300"
+							>
+								<X size={20} />
+							</button>
+						</div>
+
+						{/* Mobile Navigation Links */}
+						<div className="flex-1 px-6 py-8">
+							<ul className="space-y-4">{navLinks}</ul>
+						</div>
+
+						{/* Mobile Resume Button */}
+						<div className="p-6 border-t border-white/10">
+							<a
+								href="/resume.pdf"
+								download
+								className="group relative w-full flex items-center justify-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105"
+								onClick={() => setIsMobileMenuOpen(false)}
+							>
+								<Download size={16} />
+								<span>Download Resume</span>
+								<div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur"></div>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
