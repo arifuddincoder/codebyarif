@@ -212,11 +212,10 @@ const Projects = () => {
 						isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
 					}`}
 				>
-					<div className="flex flex-col md:flex-row gap-6 items-center justify-between">
-						{/* Category Filter */}
-						<div className="flex items-center gap-2">
-							<Filter className="text-cyan-400" size={20} />
-							<div className="flex gap-2">
+					<div className="flex flex-col lg:flex-row gap-6 items-center justify-between flex-wrap">
+						<div className="flex items-center gap-2 flex-wrap">
+							<Filter className="text-cyan-400 hidden md:inline-block" size={20} />
+							<div className="flex gap-2 flex-wrap justify-center sm:justify-normal">
 								{categories.map((category) => (
 									<button
 										key={category}
@@ -233,7 +232,6 @@ const Projects = () => {
 							</div>
 						</div>
 
-						{/* Search Bar */}
 						<div className="relative">
 							<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
 							<input
