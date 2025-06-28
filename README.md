@@ -1,12 +1,75 @@
-# React + Vite
+# <CodeByArif />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 A modern and responsive developer portfolio built with React, Tailwind CSS, and Firebase to showcase my skills, projects, and professional experience.
 
-Currently, two official plugins are available:
+🔗 **Live Website:** [https://codebyarif.web.app/](https://codebyarif.web.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📌 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Clean and elegant design
+- Smooth page transitions and animations
+- Fully responsive across all devices
+- Project showcase with live links
+- Skills and technology stack display
+- Education and professional experience section
+- Firebase deployed with blazing fast performance
+
+---
+
+## 🛠️ Technologies Used
+
+- **React** – Frontend Library
+- **React Router DOM** – Routing
+- **Tailwind CSS** – Utility-first styling
+- **DaisyUI** – UI components
+- **Lucide React** – Icon library
+- **Firebase** – Hosting & Deployment
+
+---
+
+## 📁 Folder Structure
+
+```
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   └── App.jsx
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots of your site if you'd like (optional)
+
+---
+
+## 🧑‍💻 Author
+
+**Md Arif Uddin**  
+Full-Stack MERN Developer from 🇧🇩 South Asia
+
+- 🔗 Portfolio: [codebyarif.web.app](https://codebyarif.web.app/)
+- 📧 Email: xossarif@gmail.com
+- 💼 LinkedIn: [linkedin.com/in/arif128551](https://www.linkedin.com/in/arif128551/)
+- 💻 GitHub: [github.com/arif128551](https://github.com/arif128551)
+
+---
+
+## 📬 Contact
+
+Have a project idea or want to collaborate? Feel free to reach out!  
+👉 Just visit the [Contact Page](https://codebyarif.web.app/contact)
+
+---
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
