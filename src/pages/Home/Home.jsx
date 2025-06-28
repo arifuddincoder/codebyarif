@@ -361,7 +361,7 @@ const Home = () => {
 						<h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
 							Education
 						</h2>
-						<div className="p-6 min-h-35 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+						<div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
 							<div className="flex items-start gap-4">
 								<div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center mt-1">
 									<span className="text-2xl">🎓</span>
@@ -378,7 +378,7 @@ const Home = () => {
 						<h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
 							Experience
 						</h2>
-						<div className="p-6 min-h-35 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+						<div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
 							<div className="flex items-start gap-4">
 								<div className="w-12 h-12 bg-gradient-to-br from-green-400 to-cyan-500 rounded-xl flex items-center justify-center mt-1">
 									<span className="text-2xl">💼</span>
