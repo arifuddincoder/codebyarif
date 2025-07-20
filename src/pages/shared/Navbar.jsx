@@ -120,16 +120,16 @@ const Navbar = () => {
 
 			{/* Mobile Menu Overlay */}
 			<div
-				className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${
+				className={`fixed inset-0 z-9999 lg:hidden transition-all duration-300 ${
 					isMobileMenuOpen
-						? "bg-black/50 backdrop-blur-sm opacity-100 pointer-events-auto z-"
+						? "bg-black/50 backdrop-blur-sm opacity-100 pointer-events-auto"
 						: "opacity-0 pointer-events-none"
 				}`}
 			>
 				{/* Mobile Menu */}
 				<div
-					className={`fixed top-0 right-0 h-full w-80 max-w-full bg-slate-900/95 backdrop-blur-lg border-l border-white/10 shadow-2xl transition-transform duration-300 ${
-						isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+					className={`fixed top-0 right-0 h-full w-80 max-w-full bg-slate-900/95 backdrop-blur-lg border-l border-white/10 shadow-2xl transition-transform duration-300 z-999999 ${
+						isMobileMenuOpen ? "translate-x-0 " : "translate-x-full"
 					}`}
 				>
 					<div className="flex flex-col h-full">
