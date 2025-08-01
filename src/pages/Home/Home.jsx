@@ -92,9 +92,9 @@ const projects = [
 	},
 ];
 const socialLinks = [
-	{ icon: Github, url: "https://github.com/arif128551" },
-	{ icon: Linkedin, url: "https://www.linkedin.com/in/arif128551/" },
-	{ icon: Mail, url: "mailto:xossarif@gmail.com" },
+	{ icon: Github, url: "https://github.com/arifuddincoder" },
+	{ icon: Linkedin, url: "https://www.linkedin.com/in/arifuddincoder/" },
+	{ icon: Mail, url: "mailto:arifuddincoder@gmail.com" },
 ];
 const Home = () => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -109,7 +109,7 @@ const Home = () => {
 	}, []);
 
 	useEffect(() => {
-		document.title = "Md Arif Uddin | Full-Stack MERN Developer";
+		document.title = "Md Arif Uddin | Full-Stack Developer";
 	}, []);
 
 	return (
@@ -135,7 +135,7 @@ const Home = () => {
 								</span>
 								<br />
 								<span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-									MERN Developer
+									Developer
 								</span>
 							</h1>
 							<p className="text-xl text-gray-300 max-w-md leading-relaxed">
@@ -145,7 +145,7 @@ const Home = () => {
 
 						<div className="flex flex-col md:flex-row gap-4 min-w-0">
 							<a
-								href="/mdarifuddin-resume.pdf"
+								href="/Md-Arif-Uddin-Resume.pdf"
 								className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
 								download
 							>
@@ -403,7 +403,7 @@ const Home = () => {
 						<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
 							Let's bring your vision to life with cutting-edge web technologies and innovative solutions.
 						</p>
-						<Link to="mailto:xossarif@gmail.com">
+						<Link to="mailto:arifuddincoder@gmail.com">
 							<button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
 								<span className="flex items-center gap-2">
 									<Mail size={20} />

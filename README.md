@@ -57,9 +57,9 @@
 Full-Stack MERN Developer from 🇧🇩 South Asia
 
 - 🔗 Portfolio: [codebyarif.web.app](https://codebyarif.web.app/)
-- 📧 Email: xossarif@gmail.com
-- 💼 LinkedIn: [linkedin.com/in/arif128551](https://www.linkedin.com/in/arif128551/)
-- 💻 GitHub: [github.com/arif128551](https://github.com/arif128551)
+- 📧 Email: arifuddincoder@gmail.com
+- 💼 LinkedIn: [linkedin.com/in/arifuddincoder](https://www.linkedin.com/in/arifuddincoder/)
+- 💻 GitHub: [github.com/arifuddincoder](https://github.com/arifuddincoder)
 
 ---
 

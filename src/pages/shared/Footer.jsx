@@ -33,7 +33,7 @@ const Footer = () => {
 
 								<ChevronRight size={45} className="text-purple-400" />
 							</Link>
-							<p className="text-lg text-gray-300">Full-Stack MERN Developer</p>
+							<p className="text-lg text-gray-300">Full-Stack Developer</p>
 							<p className="text-gray-400 leading-relaxed">
 								Passionate about creating innovative web solutions and bringing ideas to life through clean, efficient
 								code.
@@ -65,13 +65,13 @@ const Footer = () => {
 							<h3 className="text-xl font-semibold text-cyan-400 mb-4">Let's Connect</h3>
 							<div className="space-y-3">
 								<Link
-									to="mailto:xossarif@gmail.com"
+									to="mailto:arifuddincoder@gmail.com"
 									className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 group"
 								>
 									<div className="p-2 bg-white/10 rounded-lg group-hover:bg-cyan-400/20 transition-colors duration-300">
 										<Mail size={16} />
 									</div>
-									<span className="text-sm">xossarif@gmail.com</span>
+									<span className="text-sm">arifuddincoder@gmail.com</span>
 								</Link>
 								<p className="flex items-center gap-3 text-gray-300">
 									<div className="p-2 bg-white/10 rounded-lg">
@@ -92,9 +92,9 @@ const Footer = () => {
 							<div className="flex items-center gap-4">
 								<span className="text-gray-400 text-sm mr-2">Follow me:</span>
 								{[
-									{ icon: Mail, href: "mailto:arifmbstu128551@gmail.com", label: "Email" },
-									{ icon: Github, href: "https://github.com/arif128551", label: "GitHub" },
-									{ icon: Linkedin, href: "https://linkedin.com/in/arif128551", label: "LinkedIn" },
+									{ icon: Mail, href: "mailto:arifuddincoder@gmail.com", label: "Email" },
+									{ icon: Github, href: "https://github.com/arifuddincoder", label: "GitHub" },
+									{ icon: Linkedin, href: "https://linkedin.com/in/arifuddincoder", label: "LinkedIn" },
 								].map((social, index) => {
 									const Icon = social.icon;
 									return (

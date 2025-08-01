@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 import React from "react";
 import { Link } from "react-router";
 
@@ -14,8 +15,12 @@ const ProjectCard = ({ project }) => {
 					{/* <Link to={`/projects/${id}`} className="text-sm text-indigo-600 hover:underline font-medium">
 						View Details →
 					</Link> */}
-					<Link to={live} target="_blank" className="text-sm text-green-600 hover:underline font-medium">
-						Live Site
+					<Link
+						to={live}
+						target="_blank"
+						className="flex items-center gap-2 text-indigo-600 font-semibold hover:gap-4 transition-all duration-300 w-fit"
+					>
+						Live Site <ExternalLink size={16} />
 					</Link>
 				</div>
 			</div>

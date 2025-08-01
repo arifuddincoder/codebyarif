@@ -15,8 +15,8 @@ const Contact = () => {
 		{
 			icon: Mail,
 			title: "Email",
-			value: "xossarif@gmail.com",
-			link: "mailto:xossarif@gmail.com",
+			value: "arifuddincoder@gmail.com",
+			link: "mailto:arifuddincoder@gmail.com",
 			linkText: "Email Me",
 			delay: 200,
 		},
@@ -60,16 +60,16 @@ const Contact = () => {
 		{
 			icon: Linkedin,
 			platform: "LinkedIn",
-			username: "@arif128551",
-			link: "https://www.linkedin.com/in/arif128551/",
+			username: "@arifuddincoder",
+			link: "https://www.linkedin.com/in/arifuddincoder/",
 			color: "blue-600",
 			delay: 1200,
 		},
 		{
 			icon: Github,
 			platform: "GitHub",
-			username: "@arif128551",
-			link: "https://github.com/arif128551",
+			username: "@arifuddincoder",
+			link: "https://github.com/arifuddincoder",
 			color: "gray-700",
 			delay: 1400,
 		},
@@ -150,7 +150,7 @@ const Contact = () => {
 							Whether you have a clear vision or just an idea, I'm here to help bring your digital dreams to life.
 						</p>
 						<Link
-							to="mailto:xossarif@gmail.com"
+							to="mailto:arifuddincoder@gmail.com"
 							className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-2xl hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
 						>
 							<Mail size={20} />
