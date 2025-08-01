@@ -51,7 +51,7 @@ const Contact = () => {
 		{
 			icon: CalendarClock,
 			title: "Best Time to Reach",
-			value: "10:00 AM – 6:00 PM (GMT+6)",
+			value: "10:00 AM – 11:00 PM (GMT+6)",
 			delay: 1200,
 		},
 	];
