@@ -24,7 +24,7 @@ const projects = [
 		description: "Roommate finder platform with filtering, listing, and secure dashboard.",
 		image: findnestImg,
 		live: "https://b11a10-findnest.web.app/",
-		github: "https://github.com/arifuddincoder/findnest_client",
+		github: "https://github.com/arifuddincoder/findnest-client",
 		tags: ["React", "Node.js", "JWT", "MongoDB"],
 		category: "Web App",
 		featured: true,
