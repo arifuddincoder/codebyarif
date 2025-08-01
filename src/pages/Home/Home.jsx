@@ -14,7 +14,7 @@ import {
 	ExternalLink,
 } from "lucide-react";
 import { Link } from "react-router";
-import arifImg from "../../assets/profile.jpg";
+import arifImg from "../../assets/arif-fullstack-dev.png";
 import { FaGraduationCap } from "react-icons/fa";
 import { MdWorkOutline } from "react-icons/md";
 
