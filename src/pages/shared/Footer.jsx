@@ -73,14 +73,14 @@ const Footer = () => {
 									</div>
 									<span className="text-sm">arifuddincoder@gmail.com</span>
 								</Link>
-								<p className="flex items-center gap-3 text-gray-300">
+								<div className="flex items-center gap-3 text-gray-300">
 									<div className="p-2 bg-white/10 rounded-lg">
 										<span className="text-sm">
 											<Pin size={16} />
 										</span>
 									</div>
 									<span className="text-sm">Tangail, Bangladesh</span>
-								</p>
+								</div>
 							</div>
 						</div>
 					</div>

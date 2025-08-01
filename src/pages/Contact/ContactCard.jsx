@@ -17,7 +17,7 @@ const ContactCard = ({ icon: Icon, title, value, link, linkText, delay = 0 }) =>
 			}`}
 			style={{ transitionDelay: `${delay}ms` }}
 		>
-			<div className="flex items-start gap-4">
+			<div className="flex flex-col sm:flex-row items-start gap-4">
 				<div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl group-hover:scale-110 transition-transform duration-300">
 					<Icon className="text-white" size={24} />
 				</div>

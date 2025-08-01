@@ -277,7 +277,7 @@ const Projects = () => {
 						isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
 					}`}
 				>
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
 						{[
 							{ label: "Total Projects", value: "500+" },
 							{ label: "Technologies", value: "15+" },

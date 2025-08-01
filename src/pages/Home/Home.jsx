@@ -15,8 +15,11 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 import arifImg from "../../assets/profile.jpg";
+import { FaGraduationCap } from "react-icons/fa";
+import { MdWorkOutline } from "react-icons/md";
 
 const skills = [
+	"TypeScript",
 	"JavaScript",
 	"React",
 	"MongoDB",
@@ -32,7 +35,6 @@ const skills = [
 	"Node.js",
 	"Photoshop",
 	"Postman",
-	"Figma",
 	"WordPress",
 	"Figma",
 ];
@@ -143,7 +145,7 @@ const Home = () => {
 							</p>
 						</div>
 
-						<div className="flex flex-col md:flex-row gap-4 min-w-0">
+						<div className="flex flex-col sm:flex-row gap-4">
 							<a
 								href="/Md-Arif-Uddin-Resume.pdf"
 								className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
@@ -184,16 +186,16 @@ const Home = () => {
 						}`}
 					>
 						<div className="relative">
-							<div className="w-80 h-80 mx-auto bg-gradient-to-br from-cyan-400/20 to-purple-600/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10">
-								<div className="w-64 h-64 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full flex items-center justify-center border-4 border-cyan-400/30">
+							<div className="w-60 h-60 sm:w-80 sm:h-80 mx-auto bg-gradient-to-br from-cyan-400/20 to-purple-600/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10">
+								<div className="w-50 h-50 sm:w-64 sm:h-64 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full flex items-center justify-center border-4 border-cyan-400/30">
 									{/* <Code size={80} className="text-cyan-400" /> */}
 									<img src={arifImg} alt="" className="rounded-full object-cover" />
 								</div>
 							</div>
-							<div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center animate-bounce">
+							<div className="hidden sm:flex absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full  items-center justify-center animate-bounce">
 								<Star className="text-white" size={32} />
 							</div>
-							<div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-green-400 to-cyan-500 rounded-full animate-pulse"></div>
+							<div className="hidden sm:flex absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-green-400 to-cyan-500 rounded-full animate-pulse"></div>
 						</div>
 					</div>
 				</div>
@@ -357,14 +359,15 @@ const Home = () => {
 			{/* Education & Experience */}
 			<section className="relative z-10 py-10 lg:py-20 px-6">
 				<div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+					{/* Education */}
 					<div className="space-y-8">
 						<h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
 							Education
 						</h2>
 						<div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-cyan-400/50 transition-all duration-300 lg:min-h-[125px]">
-							<div className="flex items-start gap-4">
-								<div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center mt-1">
-									<span className="text-2xl">🎓</span>
+							<div className="flex flex-col sm:flex-row items-start gap-4">
+								<div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center mt-1 text-white text-2xl">
+									<FaGraduationCap />
 								</div>
 								<div>
 									<h3 className="text-xl font-bold text-white mb-2">B.Sc (Hons) in Physics</h3>
@@ -374,14 +377,15 @@ const Home = () => {
 						</div>
 					</div>
 
+					{/* Experience */}
 					<div className="space-y-8">
 						<h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
 							Experience
 						</h2>
 						<div className="p-6 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-cyan-400/50 transition-all duration-300 lg:min-h-[125px]">
-							<div className="flex items-start gap-4">
-								<div className="w-12 h-12 bg-gradient-to-br from-green-400 to-cyan-500 rounded-xl flex items-center justify-center mt-1">
-									<span className="text-2xl">💼</span>
+							<div className="flex flex-col sm:flex-row items-start gap-4">
+								<div className="w-12 h-12 bg-gradient-to-br from-green-400 to-cyan-500 rounded-xl flex items-center justify-center mt-1 text-white text-2xl">
+									<MdWorkOutline />
 								</div>
 								<div>
 									<h3 className="text-xl font-bold text-white mb-2">Web Developer at CornerStone Protection</h3>
@@ -397,7 +401,7 @@ const Home = () => {
 			<section className="relative z-10 py-10 lg:py-20 px-6">
 				<div className="max-w-4xl mx-auto text-center">
 					<div className="p-12 bg-gradient-to-br from-cyan-500/10 to-purple-600/10 rounded-3xl backdrop-blur-sm border border-white/10">
-						<h2 className="text-3xl md:text-4xl/snug font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+						<h2 className="text-xl sm:text-3xl md:text-4xl/snug font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
 							Have a project idea to collaborate with?
 						</h2>
 						<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
