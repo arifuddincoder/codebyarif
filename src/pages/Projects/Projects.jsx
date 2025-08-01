@@ -46,7 +46,7 @@ const projects = [
 		description: "A professional flower subscription service website for curated bloom delivery and flexible plans.",
 		image: subbloomImg,
 		live: "https://b11a9-subbloom.web.app/",
-		github: "#",
+		github: "https://github.com/arifuddincoder/react-subbloom",
 		tags: ["React", "Firebase", "JavaScript", "Tailwind"],
 		category: "Website",
 		featured: false,
