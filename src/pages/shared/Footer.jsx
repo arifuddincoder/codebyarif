@@ -67,6 +67,7 @@ const Footer = () => {
 							<div className="space-y-3">
 								<Link
 									to="https://wa.me/8801625446383"
+									target="_blank"
 									className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 group"
 								>
 									<div className="p-2 bg-white/10 rounded-lg group-hover:bg-cyan-400/20 transition-colors duration-300">
