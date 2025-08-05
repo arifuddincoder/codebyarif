@@ -1,5 +1,6 @@
 import React from "react";
 import { Github, Linkedin, Mail, Heart, ArrowUp, Pin, ChevronLeft, ChevronRight } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Footer = () => {
@@ -64,6 +65,15 @@ const Footer = () => {
 						<div className="space-y-4">
 							<h3 className="text-xl font-semibold text-cyan-400 mb-4">Let's Connect</h3>
 							<div className="space-y-3">
+								<Link
+									to="https://wa.me/8801625446383"
+									className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 group"
+								>
+									<div className="p-2 bg-white/10 rounded-lg group-hover:bg-cyan-400/20 transition-colors duration-300">
+										<FaWhatsapp size={16} />
+									</div>
+									<span className="text-sm">+8801625446383</span>
+								</Link>
 								<Link
 									to="mailto:arifuddincoder@gmail.com"
 									className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 group"
