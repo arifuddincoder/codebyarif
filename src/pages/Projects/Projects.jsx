@@ -1,12 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { ExternalLink, Github, Eye, Code, Filter, Search } from "lucide-react";
 import ProjectCard from "./ProjectCard";
+import talkoraImg from "../../assets/projects/talkora-forum.jpg";
 import cornerstoneImg from "../../assets/projects/cp.jpg";
 import findnestImg from "../../assets/projects/findnest.jpg";
 import educoreImg from "../../assets/projects/educore.jpg";
 import subbloomImg from "../../assets/projects/subbloom.jpg";
+import lifeLinkUSAImg from "../../assets/projects/lifelinkusa.jpg";
 
 const projects = [
+	{
+		id: "talkora",
+		name: "Talkora",
+		description:
+			"A feature-rich discussion platform with real-time posts, comments, voting, membership tiers, and an admin dashboard for content moderation.",
+		image: talkoraImg,
+		live: "https://b11a12-talkora.web.app/",
+		github: "https://github.com/arifuddincoder/talkora-forum-client",
+		tags: ["React", "Firebase", "MongoDB", "Express"],
+		category: "Full-Stack",
+		featured: true,
+	},
 	{
 		id: "educore",
 		name: "EduCore",
@@ -26,7 +40,7 @@ const projects = [
 		live: "https://b11a10-findnest.web.app/",
 		github: "https://github.com/arifuddincoder/findnest-client",
 		tags: ["React", "Node.js", "JWT", "MongoDB"],
-		category: "Web App",
+		category: "Full-Stack",
 		featured: true,
 	},
 	{
@@ -48,6 +62,18 @@ const projects = [
 		live: "https://b11a9-subbloom.web.app/",
 		github: "https://github.com/arifuddincoder/react-subbloom",
 		tags: ["React", "Firebase", "JavaScript", "Tailwind"],
+		category: "Web App",
+		featured: false,
+	},
+	{
+		id: "lifelinkusa",
+		name: "Life Link USA",
+		description:
+			"A trusted provider of personal emergency response systems (PERS), offering in‑home and on‑the‑go medical alert solutions with fall detection and wearable LTE devices. ",
+		image: lifeLinkUSAImg,
+		live: "https://www.lifelinkusa.com/",
+		github: "",
+		tags: ["PHP", "WordPress", "Woocommerce"],
 		category: "Website",
 		featured: false,
 	},

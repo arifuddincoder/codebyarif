@@ -68,6 +68,14 @@ const services = [
 
 const projects = [
 	{
+		title: "Talkora Forum",
+		category: "Full-Stack",
+		description: "Feature-rich forum with posts, voting, and moderation",
+		image: "bg-gradient-to-br from-blue-400 to-purple-600",
+		tags: ["React", "Node.js", "Express.js", "MongoDB"],
+		link: "https://b11a12-talkora.web.app/",
+	},
+	{
 		title: "EduCore Platform",
 		category: "Course Management",
 		description: "A comprehensive learning management system built with MERN stack",
@@ -76,21 +84,12 @@ const projects = [
 		link: "https://b11a11-educore.web.app/",
 	},
 	{
-		title: "E-Commerce Solution",
+		title: "Life Link USA",
 		category: "Web Application",
-		description: "Full-featured online store with payment integration",
+		description: "Trusted provider of personal emergency alert solutions",
 		image: "bg-gradient-to-br from-green-400 to-blue-600",
 		tags: ["WordPress", "Woocommerce", "Stripe"],
 		link: "https://www.lifelinkusa.com/",
-	},
-	{
-		title: "FindNest",
-		category: "Roommate Finder Web App",
-		description:
-			"A modern platform to discover and manage roommate listings with filtering, booking, and secure authentication.",
-		image: "bg-gradient-to-br from-cyan-500 to-purple-600",
-		tags: ["React", "Firebase", "MongoDB", "Tailwind"],
-		link: "https://b11a10-findnest.web.app/",
 	},
 ];
 const socialLinks = [
@@ -214,18 +213,19 @@ const Home = () => {
 					<div className="flex gap-12 items-stretch flex-col lg:flex-row">
 						<div className="flex-1 space-y-6">
 							<p className="text-lg text-gray-300 leading-relaxed">
-								I'm <strong className="text-white">Md Arif Uddin</strong>, a passionate Full-Stack MERN Developer from
-								🇧🇩 South Asia. Currently working on <strong className="text-cyan-400">EduCore</strong>, learning{" "}
-								<strong className="text-purple-400">Next.js</strong>, and exploring{" "}
+								I&apos;m <strong className="text-white">Md Arif Uddin</strong>, a passionate Full-Stack Developer from
+								🇧🇩 South Asia. Recently completed <strong className="text-cyan-400">Talkora Forum</strong> and currently
+								learning <strong className="text-purple-400">TypeScript</strong> while exploring{" "}
 								<strong className="text-green-400">MongoDB Aggregation</strong>, advanced{" "}
-								<strong className="text-orange-400">Firebase Auth</strong>, and performance optimization in React.
+								<strong className="text-orange-400">Firebase Authentication</strong>, and performance optimization in
+								React.
 							</p>
 							<div className="space-y-4">
 								{[
-									"🔭 Working on EduCore (Course Management System)",
-									"🌱 Learning Next.js and SSR",
-									"🚀 Exploring Firebase + MongoDB aggregation",
-									"💡 Always eager to learn new things",
+									"✅ Recently completed Talkora Forum (Community Discussion Platform)",
+									"🌱 Learning TypeScript and Advanced React Patterns",
+									"🚀 Exploring Firebase Authentication + MongoDB Aggregation",
+									"💡 Always eager to learn and improve skills",
 								].map((item, index) => (
 									<div
 										key={index}
