@@ -1,5 +1,16 @@
 import React from "react";
-import { Github, Linkedin, Mail, Heart, ArrowUp, Pin, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+	Github,
+	Linkedin,
+	Mail,
+	Heart,
+	ArrowUp,
+	Pin,
+	ChevronLeft,
+	ChevronRight,
+	Twitter,
+	Facebook,
+} from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router";
 
@@ -100,12 +111,14 @@ const Footer = () => {
 					<div className="border-t border-white/10 pt-8">
 						<div className="flex flex-col md:flex-row justify-between items-center gap-6">
 							{/* Social Links */}
-							<div className="flex items-center gap-4">
-								<span className="text-gray-400 text-sm mr-2">Follow me:</span>
+							<div className="flex items-center gap-4 flex-wrap">
+								<span className="text-gray-400 text-sm mr-2 w-full sm:w-auto">Follow me:</span>
 								{[
 									{ icon: Mail, href: "mailto:arifuddincoder@gmail.com", label: "Email" },
 									{ icon: Github, href: "https://github.com/arifuddincoder", label: "GitHub" },
 									{ icon: Linkedin, href: "https://linkedin.com/in/arifuddincoder", label: "LinkedIn" },
+									{ icon: Twitter, href: "https://twitter.com/arifuddincoder", label: "Twitter" },
+									{ icon: Facebook, href: "https://facebook.com/arifuddincoder", label: "Facebook" },
 								].map((social, index) => {
 									const Icon = social.icon;
 									return (

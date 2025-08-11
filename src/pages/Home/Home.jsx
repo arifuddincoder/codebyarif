@@ -12,6 +12,8 @@ import {
 	Github,
 	Linkedin,
 	ExternalLink,
+	Twitter,
+	Facebook,
 } from "lucide-react";
 import { Link } from "react-router";
 import arifImg from "../../assets/arif-fullstack-dev.png";
@@ -95,6 +97,8 @@ const projects = [
 const socialLinks = [
 	{ icon: Github, url: "https://github.com/arifuddincoder" },
 	{ icon: Linkedin, url: "https://www.linkedin.com/in/arifuddincoder/" },
+	{ icon: Twitter, url: "https://twitter.com/arifuddincoder" },
+	{ icon: Facebook, url: "https://facebook.com/arifuddincoder" },
 	{ icon: Mail, url: "mailto:arifuddincoder@gmail.com" },
 ];
 const Home = () => {
@@ -164,7 +168,7 @@ const Home = () => {
 							</Link>
 						</div>
 
-						<div className="flex gap-6">
+						<div className="flex gap-6 flex-wrap">
 							{socialLinks.map((item, index) => (
 								<a
 									key={index}
@@ -214,16 +218,25 @@ const Home = () => {
 						<div className="flex-1 space-y-6">
 							<p className="text-lg text-gray-300 leading-relaxed">
 								I&apos;m <strong className="text-white">Md Arif Uddin</strong>, a passionate Full-Stack Developer from
-								🇧🇩 South Asia. Recently completed <strong className="text-cyan-400">Talkora Forum</strong> and currently
-								learning <strong className="text-purple-400">TypeScript</strong> while exploring{" "}
-								<strong className="text-green-400">MongoDB Aggregation</strong>, advanced{" "}
-								<strong className="text-orange-400">Firebase Authentication</strong>, and performance optimization in
-								React.
+								🇧🇩 South Asia with <strong className="text-cyan-400">10+ years</strong> of experience. My journey began
+								with small HTML & CSS projects, eventually mastering JavaScript, React, and backend development to build
+								real-world solutions.
+							</p>
+							<p className="text-lg text-gray-300 leading-relaxed">
+								I enjoy working with <strong className="text-purple-400">TypeScript</strong>,{" "}
+								<strong className="text-green-400">MongoDB Aggregation</strong>, and{" "}
+								<strong className="text-orange-400">Firebase Authentication</strong>, focusing on performance
+								optimization in React. Recently, I completed <strong className="text-cyan-400">Talkora Forum</strong>{" "}
+								and I’m exploring advanced React patterns and database optimization.
+							</p>
+							<p className="text-lg text-gray-300 leading-relaxed">
+								Outside coding, I enjoy traveling, reading, and photography—always eager to learn, solve problems, and
+								bring creative ideas to life.
 							</p>
 							<div className="space-y-4">
 								{[
 									"✅ Recently completed Talkora Forum (Community Discussion Platform)",
-									"🌱 Learning TypeScript and Advanced React Patterns",
+									"🌱 Currently learning TypeScript and Advanced React Patterns",
 									"🚀 Exploring Firebase Authentication + MongoDB Aggregation",
 									"💡 Always eager to learn and improve skills",
 								].map((item, index) => (
