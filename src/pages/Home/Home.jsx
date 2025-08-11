@@ -14,11 +14,13 @@ import {
 	ExternalLink,
 	Twitter,
 	Facebook,
+	Eye,
 } from "lucide-react";
 import { Link } from "react-router";
 import arifImg from "../../assets/arif-fullstack-dev.png";
 import { FaGraduationCap } from "react-icons/fa";
 import { MdWorkOutline } from "react-icons/md";
+import { projects } from "../../assets/data/projects";
 
 const skills = [
 	"TypeScript",
@@ -68,32 +70,6 @@ const services = [
 	},
 ];
 
-const projects = [
-	{
-		title: "Talkora Forum",
-		category: "Full-Stack",
-		description: "Feature-rich forum with posts, voting, and moderation",
-		image: "bg-gradient-to-br from-blue-400 to-purple-600",
-		tags: ["React", "Node.js", "Express.js", "MongoDB"],
-		link: "https://b11a12-talkora.web.app/",
-	},
-	{
-		title: "EduCore Platform",
-		category: "Course Management",
-		description: "A comprehensive learning management system built with MERN stack",
-		image: "bg-gradient-to-br from-blue-400 to-purple-600",
-		tags: ["React", "Node.js", "MongoDB"],
-		link: "https://b11a11-educore.web.app/",
-	},
-	{
-		title: "Life Link USA",
-		category: "Web Application",
-		description: "Trusted provider of personal emergency alert solutions",
-		image: "bg-gradient-to-br from-green-400 to-blue-600",
-		tags: ["WordPress", "Woocommerce", "Stripe"],
-		link: "https://www.lifelinkusa.com/",
-	},
-];
 const socialLinks = [
 	{ icon: Github, url: "https://github.com/arifuddincoder" },
 	{ icon: Linkedin, url: "https://www.linkedin.com/in/arifuddincoder/" },
@@ -101,6 +77,7 @@ const socialLinks = [
 	{ icon: Facebook, url: "https://facebook.com/arifuddincoder" },
 	{ icon: Mail, url: "mailto:arifuddincoder@gmail.com" },
 ];
+
 const Home = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	const [activeService, setActiveService] = useState(0);
@@ -324,47 +301,82 @@ const Home = () => {
 					<h2 className="text-3xl md:text-5xl font-bold text-center mb-8 lg:mb-10 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
 						Featured Projects
 					</h2>
+
 					<div className="space-y-8">
-						{projects.map((project, index) => (
-							<div
-								key={index}
-								className="group relative overflow-hidden rounded-3xl backdrop-blur-sm border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-[1.02]"
-							>
-								<div className="grid md:grid-cols-2 gap-0">
-									<div className="p-8 flex flex-col justify-center space-y-6">
-										<div className="space-y-2">
-											<p className="text-cyan-400 font-medium">{project.category}</p>
-											<h3 className="text-3xl font-bold group-hover:text-cyan-400 transition-colors duration-300">
-												{project.title}
-											</h3>
-											<p className="text-gray-300 leading-relaxed">{project.description}</p>
+						{projects
+							.filter((p) => p.featured) // ✅ now using the data array
+							.map((project) => (
+								<div
+									key={project.id}
+									className="group relative overflow-hidden rounded-3xl backdrop-blur-sm border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-[1.02]"
+								>
+									<div className="grid md:grid-cols-2 gap-0">
+										{/* Left: Info */}
+										<div className="p-8 flex flex-col justify-center space-y-6">
+											<div className="space-y-2">
+												{project.category && <p className="text-cyan-400 font-medium">{project.category}</p>}
+												<h3 className="text-3xl font-bold group-hover:text-cyan-400 transition-colors duration-300">
+													{project.name}
+												</h3>
+												<p className="text-gray-300 leading-relaxed">{project.description}</p>
+											</div>
+
+											{project.tags?.length > 0 && (
+												<div className="flex flex-wrap gap-2">
+													{project.tags.map((tag) => (
+														<span
+															key={tag}
+															className="px-3 py-1 bg-white/10 rounded-full text-sm border border-white/20"
+														>
+															{tag}
+														</span>
+													))}
+												</div>
+											)}
+
+											<div className="flex flex-wrap gap-3 pt-2">
+												<Link
+													to={`/projects/${project.id}`}
+													className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-lg hover:bg-white/20 transition"
+												>
+													<Eye size={16} />
+													<span>Details</span>
+												</Link>
+
+												{project.live && (
+													<a
+														href={project.live}
+														target="_blank"
+														rel="noopener noreferrer"
+														className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition"
+													>
+														<ExternalLink size={16} />
+														<span>Live Site</span>
+													</a>
+												)}
+
+												{project.github && project.github !== "#" && (
+													<a
+														href={project.github}
+														target="_blank"
+														rel="noopener noreferrer"
+														className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-lg hover:bg-white/20 transition"
+													>
+														<Code size={16} />
+														<span>Code</span>
+													</a>
+												)}
+											</div>
 										</div>
-										<div className="flex flex-wrap gap-2">
-											{project.tags.map((tag) => (
-												<span key={tag} className="px-3 py-1 bg-white/10 rounded-full text-sm border border-white/20">
-													{tag}
-												</span>
-											))}
-										</div>
-										<Link
-											to={project.link}
-											target="_blank"
-											className="flex items-center gap-2 text-cyan-400 font-semibold hover:gap-4 transition-all duration-300 w-fit"
-										>
-											Live Site <ExternalLink size={16} />
-										</Link>
-									</div>
-									<div
-										className={`h-64 md:h-auto ${project.image} flex items-center justify-center relative overflow-hidden`}
-									>
-										<div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
-										<div className="relative z-10 w-48 h-48 bg-white/10 rounded-2xl backdrop-blur-sm flex items-center justify-center border border-white/20">
-											<Code size={48} className="text-white/70" />
+
+										{/* Right: Image */}
+										<div className="relative h-64 md:h-auto">
+											<img src={project.image} alt={project.name} className="w-full h-full object-cover" />
+											<div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
 										</div>
 									</div>
 								</div>
-							</div>
-						))}
+							))}
 					</div>
 				</div>
 			</section>
