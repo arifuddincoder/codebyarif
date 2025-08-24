@@ -97,7 +97,7 @@ const Navbar = () => {
 						<div className="navbar-end flex items-center space-x-4">
 							{/* Download Resume Button */}
 							<a
-								href="/Md-Arif-Uddin-Resume.pdf"
+								href="/Md_Arif_Uddin_Resume.pdf"
 								download
 								className="group relative px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 hidden lg:flex items-center space-x-2"
 							>
@@ -154,7 +154,7 @@ const Navbar = () => {
 						{/* Mobile Resume Button */}
 						<div className="p-6 border-t border-white/10">
 							<a
-								href="/resume.pdf"
+								href="/Md_Arif_Uddin_Resume.pdf"
 								download
 								className="group relative w-full flex items-center justify-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105"
 								onClick={() => setIsMobileMenuOpen(false)}
